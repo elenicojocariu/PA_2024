@@ -96,6 +96,7 @@ public class Main {
         }
 
         displayMatrix(adjMatrix);
+        findCycles(adjMatrix);
     }
 
     private static void findCycles(int[][] adjMatrix) {
@@ -108,6 +109,7 @@ public class Main {
                 if (cycle.length() > 0) {
                     System.out.println("Cycle: " + cycle.toString());
                 }
+                //else System.out.println("No cycle from node "+ i);
             }
         }
     }
@@ -116,13 +118,16 @@ public class Main {
 
         visited[current] = 1;
         cycle.append(current).append(" ");
-
+        System.out.println("Now im at node: " + current);
         for (int i = 0; i < adjMatrix.length; i++) {
             if (adjMatrix[current][i] == 1) {
-                if (visited[i] != 0)
-                    DFS(start, i, adjMatrix, visited, cycle);
-                else if (i == start && cycle.length() > 2) {
-                    cycle.append(cycle.toString());
+                System.out.println("checking edge between "+ current + " and "+ i);
+                if (visited[i] != 0 && cycle.toString().contains(" "+ i + " ")){
+                    System.out.println("Node at position "+ i + " is already visited");
+                    DFS(start, i, adjMatrix, visited, cycle);}
+                else if (i == start && cycle.length() > 2) { // verific ca nu i o simpla muchie conexiunea
+                    cycle.append(current);
+                    System.out.println("cycle is: "+ cycle.toString());
                 }
             }
         }
@@ -138,6 +143,7 @@ public class Main {
         }
 
     }
+
 
 
 }
