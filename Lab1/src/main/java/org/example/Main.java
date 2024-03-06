@@ -1,7 +1,8 @@
 package org.example;
 
 import java.util.Random;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Main {
     public static void main(String[] args) {
         compulsory();
@@ -80,7 +81,7 @@ public class Main {
     }
 
     public static void bonus(String[] args) {
-        int n = 7;
+        int n = 4;
         int[][] adjMatrix = new int[n][n];
 
         for (int i = 1; i < n; i++) { //conectez hub-ul de toate nodurile
@@ -102,11 +103,15 @@ public class Main {
     private static void findCycles(int[][] adjMatrix) {
         int n = adjMatrix.length;
         int[] visited = new int[n];
+
+
         for (int i = 0; i < n; i++) {
             if (visited[i] == 0) {
-                StringBuilder cycle = new StringBuilder();
+                //StringBuilder cycle = new StringBuilder();
+                List<Integer> cycle = new ArrayList<>();
                 DFS(i, i, adjMatrix, visited, cycle);
-                if (cycle.length() > 0) {
+                //if (cycle.length() > 0) {
+                if (!cycle.isEmpty()){
                     System.out.println("Cycle: " + cycle.toString());
                 }
                 //else System.out.println("No cycle from node "+ i);
@@ -114,23 +119,25 @@ public class Main {
         }
     }
 
-    private static void DFS(int start, int current, int[][] adjMatrix, int[] visited, StringBuilder cycle) {
+    private static void DFS(int start, int current, int[][] adjMatrix, int[] visited, List<Integer> cycle) {
 
         visited[current] = 1;
-        cycle.append(current).append(" ");
+        cycle.add(current);
         System.out.println("Now im at node: " + current);
         for (int i = 0; i < adjMatrix.length; i++) {
             if (adjMatrix[current][i] == 1) {
                 System.out.println("checking edge between "+ current + " and "+ i);
-                if (visited[i] != 0 && cycle.toString().contains(" "+ i + " ")){
-                    System.out.println("Node at position "+ i + " is already visited");
+                //if (visited[i] != 0 && cycle.toString().contains(" "+ i + " ")){
+                if (visited[i] != 0 && cycle.contains(i)){
+                    System.out.println("Node at position " + i);
                     DFS(start, i, adjMatrix, visited, cycle);}
-                else if (i == start && cycle.length() > 2) { // verific ca nu i o simpla muchie conexiunea
-                    cycle.append(current);
-                    System.out.println("cycle is: "+ cycle.toString());
+                else if (i == start && cycle.size() > 2) { // verific ca nu i o simpla muchie conexiunea
+                    //cycle.add(current);
+                    System.out.println("cycle is: "+ cycle);
                 }
             }
         }
+
     }
 
     private static void displayMatrix(int[][] matrix) {
