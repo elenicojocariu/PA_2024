@@ -13,10 +13,10 @@ public class Main {
 
         Client c2 = new Client("Client 3", LocalTime.NOON, LocalTime.MIDNIGHT);
         c2.setName("Client 2");
-        System.out.println(c2);
+        //System.out.println(c2);
 
         Client c3 = new Client("Client 3", LocalTime.NOON, LocalTime.MIDNIGHT);
-        System.out.println(c3);
+        //System.out.println(c3);
 
         //ClientType c4 =
 
