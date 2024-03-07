@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class Main {
     public static void main(String[] args) {
-        //System.out.println("Hello world!");
+
         Client c1 = new Client("Client 3", LocalTime.NOON, LocalTime.MIDNIGHT);
         c1.setName("Client 1");
         c1.setMinTime(LocalTime.of(8, 0));
