@@ -12,6 +12,9 @@ noduri. Aceasta apeleaza metoda recursiva DFS care realizeaza o parcurgere DFS i
 **_Week 2:_**
 </br>
 <br>
+Compulsory 2: 
+</br>
+<br>
 Tema 2: </br>
 <br>
 Bonus 2:
