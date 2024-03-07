@@ -1,7 +1,7 @@
 package org.example;
 
 import java.time.LocalTime;
-//import static .ClientType;
+
 public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello world!");

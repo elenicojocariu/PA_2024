@@ -1,7 +1,7 @@
 package org.example;
 
 import java.time.LocalTime;
-
+//
 public class Depot {
 
 private String name;

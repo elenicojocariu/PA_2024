@@ -1,5 +1,5 @@
 package org.example;
-
+//
 public class Vehicle {
 
     private String name;
