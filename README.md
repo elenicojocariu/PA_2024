@@ -1,12 +1,12 @@
 **_Week 1:_**
 <br>
-Compulsory 1 ->prezentat
+Compulsory 1 
 </br>
 <br>
-Tema 1: am aplicat metoda cu suma patratelor, am adaugat argumente cu ajutorul "Modify run configuration" -> prezentat </br>
+Tema 1: am aplicat metoda cu suma patratelor, am adaugat argumente cu ajutorul "Modify run configuration" </br>
 <br>
 Bonus 1: am creat matricea de adiacenta pentru un wheel graph si am afisat o. Am facut o metode findCycles care gaseste ciclurile de cate 3 
-noduri. Aceasta apeleaza metoda recursiva DFS care realizeaza o parcurgere DFS incepand cu nodurile nevizitate. ->prezentat
+noduri. Aceasta apeleaza metoda recursiva DFS care realizeaza o parcurgere DFS incepand cu nodurile nevizitate. 
 </br>
 <br>
 **_Week 2:_**
