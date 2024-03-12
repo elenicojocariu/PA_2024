@@ -8,13 +8,13 @@ public class Client {
     private LocalTime maxTime;
     private ClientType type;
 
-    public Client(String s, LocalTime noon, LocalTime midnight) {
+    public Client(String name, LocalTime minTime, LocalTime maxTime, ClientType type) {
         this.name = name;
         this.minTime = minTime;
         this.maxTime = maxTime;
         this.type = type;
     }
-
+    public Client(){ }
     public String getName() {
         return name;
     }
@@ -49,7 +49,12 @@ public class Client {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", minTime=" + minTime +
+                ", maxTime=" + maxTime +
+                ", type=" + type +
+                '}';
     }
 }
 
