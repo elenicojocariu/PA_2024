@@ -15,9 +15,12 @@ public class Main {
 
         List<Client> clientList = new ArrayList<>();
         Client client1 = new Client("client1", LocalTime.of(8, 0), LocalTime.of(10, 0), ClientType.REGULAR);
-        Client client2 = new Client("Client2", LocalTime.of(9,30), LocalTime.of(11,0), ClientType.PREMIUM);
+        Client client2 = new Client("Client2", LocalTime.of(15,30), LocalTime.of(17,0), ClientType.PREMIUM);
+        Client client3 = new Client("Client3", LocalTime.of(11,30), LocalTime.of(14,0), ClientType.REGULAR);
+
         clientList.add(client1);
         clientList.add(client2);
+        clientList.add(client3);
         System.out.println("List of clients: " + clientList);
 
 
