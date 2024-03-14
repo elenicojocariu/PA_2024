@@ -1,27 +1,58 @@
 package org.example;
 
 import java.time.LocalTime;
+import java.util.Objects;
 
+
+/**
+ * Represents a client in a transportation problem scenario.
+ * A client has a name, time constraints for service, and a type.
+ */
 public class Client {
-    private String name;
+
+    private  String name;
     private LocalTime minTime;
     private LocalTime maxTime;
     private ClientType type;
 
+    /**
+     * Constructs a new client with the given parameters.
+     *
+     * @param name the name of the client
+     * @param minTime the minimum time the client can be serviced
+     * @param maxTime the maximum time the client can be serviced
+     * @param type the type of the client
+     */
     public Client(String name, LocalTime minTime, LocalTime maxTime, ClientType type) {
         this.name = name;
         this.minTime = minTime;
         this.maxTime = maxTime;
         this.type = type;
+
     }
-    public Client(){ }
+    /**
+     * Retrieves the name of the client.
+     *
+     * @return the name of the client
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the name of the client.
+     *
+     * @param name the new name of the client
+     */
     public void setName(String name) {
         this.name = name;
     }
+
+    /**
+     * Retrieves the minimum time the client can be serviced.
+     *
+     * @return the minimum time the client can be serviced
+     */
 
     public LocalTime getMinTime() {
         return minTime;
@@ -47,6 +78,11 @@ public class Client {
         this.type = type;
     }
 
+    /**
+     * Returns a string representation of the client.
+     *
+     * @return a string representation of the client
+     */
     @Override
     public String toString() {
         return "Client{" +
@@ -55,6 +91,19 @@ public class Client {
                 ", maxTime=" + maxTime +
                 ", type=" + type +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(name, client.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
 
