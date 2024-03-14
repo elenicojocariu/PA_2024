@@ -20,6 +20,9 @@ Tema 2: Am testat metoda equals, ea returneaza false. Am facut clasa Depot bidir
 Bonus 2:
 </br>
 <br>
+**_Week 3:_**
+</br>
+<br>
 Compulsory 3: 
 </br>
 <br>
