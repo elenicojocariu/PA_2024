@@ -1,18 +1,23 @@
 package org.example;
 
+import java.sql.Time;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Map;
 
 public interface Visitable {
 
-    Map<LocalDate, TimeInterval> getTimetable();
+    Map<DayOfWeek, TimeInterval> getTimetable();
+
     default LocalTime getOpeningHour(LocalDate date) {
-        TimeInterval timeInterval = getTimetable().get(date);
-        if(timeInterval != null ){
+
+        DayOfWeek dayOfWeek = date.getDayOfWeek();
+        TimeInterval timeInterval = getTimetable().get(dayOfWeek);
+        if(timeInterval!=null)
             return timeInterval.getFirst();
-        }
-        return timeInterval.getFirst();
+        return null;
     }
+
 
 }

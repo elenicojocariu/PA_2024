@@ -1,22 +1,21 @@
 package org.example;
 
+import java.sql.Time;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        /*TimeInterval timeInterval = new TimeInterval(LocalTime.of(8,0), LocalTime.of(16,0));
-        System.out.println("Timeinterval: "+ timeInterval);
-        Pair<String, Integer> pair = new Pair<>("Hey", 11);
-        System.out.println("Pair: " + pair); */
 
         List<Attraction> attractions = new ArrayList<>();
         attractions.add(new Statue("Statue1", "beautiful"));
         attractions.add(new Statue("Statue2", "wonderful"));
-        //attractions.add(new Concert("Concert1", "loud", 240.0, (Map<LocalDate, TimeInterval>) timeInterval));
+        attractions.add(new Concert("Concert1", "loud", 240.0));
         attractions.add(new Church("Church1", "divine"));
 
         LocalDate startDate = LocalDate.of(2024, 8, 20);
@@ -28,13 +27,31 @@ public class Main {
         System.out.println("Start date: " + trip.getStart());
         System.out.println("End date: " + trip.getEnd());
         System.out.println("Attractions:");
+        //Map<LocalDate, TimeInterval> timetable = new HashMap<>();
+        //timetable.put(LocalDate.of(2024, 3, 17), new TimeInterval(LocalTime.of(9, 0), LocalTime.of(17, 0)));
+
+        Church church2 = new Church("Church2", "baroque");
+        church2.addTimeInterval(DayOfWeek.TUESDAY, LocalTime.of(8,30), LocalTime.of(15,30));
+        church2.addTimeInterval(DayOfWeek.THURSDAY, LocalTime.of(8,30), LocalTime.of(15,30));
+        church2.addTimeInterval(DayOfWeek.SUNDAY, LocalTime.of(15,0), LocalTime.of(18,30));
+
+        attractions.add(church2);
+
+        Concert concert2 = new Concert("Concert2", "classical",100.0);
+        concert2.addTimeInterval(DayOfWeek.FRIDAY, LocalTime.of(19,0), LocalTime.of(21,30));
+        attractions.add(concert2);
+
         for (Attraction attraction : trip.getAttractions()) {
             System.out.println("- " + attraction.getName() + ": " + attraction.getDescription());
         }
 
 
 
-        //Statue statue1 = new Statue("Statue1", "beautiful");
+
+
+
+
+            //Statue statue1 = new Statue("Statue1", "beautiful");
         //Statue statue2 = new Statue("Statue2", "wonderful");
         //Concert concert1 = new Concert("Concert1", "loud", 240.0, (Map<LocalDate, TimeInterval>) timeInterval);
         //Church church1 = new Church("Church1", "divine");
