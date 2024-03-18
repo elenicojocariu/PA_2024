@@ -43,6 +43,29 @@ public class Main {
 
         for (Attraction attraction : trip.getAttractions()) {
             System.out.println("- " + attraction.getName() + ": " + attraction.getDescription());
+
+            if (attraction instanceof Payable){
+                Payable payableAttraction = (Payable) attraction;
+                double ticketPrice = payableAttraction.getTicketPrice();
+                System.out.println("       Ticket price: "+ ticketPrice);
+            }
+            if (attraction instanceof Visitable){
+                Visitable visitableAttraction = (Visitable) attraction;
+                Map<DayOfWeek, TimeInterval> timetable = visitableAttraction.getTimetable();
+                if(timetable != null && !timetable.isEmpty()){
+                    System.out.println("         Timetable: ");
+                    for(Map.Entry<DayOfWeek, TimeInterval> entry : timetable.entrySet()){
+                        DayOfWeek dayOfWeek = entry.getKey();
+                        TimeInterval timeInterval = entry.getValue();
+                        System.out.println("        - "+ dayOfWeek + ": " + timeInterval.getFirst() + " - "+timeInterval.getSecond());
+
+                    }
+                }
+                else
+                    System.out.println("    No timetable ");
+            }
+
+
         }
 
 
