@@ -12,6 +12,11 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
+        /*Pair<LocalDate, String> dateAndDescription = new Pair<>(LocalDate.now(), "demonstrare functionalitate genericPair");
+        System.out.println("Date: " + dateAndDescription.getFirst());
+        System.out.println("Description: " + dateAndDescription.getSecond());
+*/
+
         List<Attraction> attractions = new ArrayList<>();
         attractions.add(new Statue("Statue1", "beautiful"));
         attractions.add(new Statue("Statue2", "wonderful"));
@@ -66,6 +71,15 @@ public class Main {
             }
 
 
+        }
+
+        for (Attraction attraction : trip.getAttractions()) {
+            if (attraction instanceof Visitable) {
+                Visitable visitable = (Visitable) attraction;
+                LocalDate currentDate = LocalDate.now();
+                LocalTime openingHour = visitable.getOpeningHour(currentDate);
+                System.out.println("Opening hour for " + attraction.getName() + " on " + currentDate + " is: " + openingHour);
+            }
         }
 
 
