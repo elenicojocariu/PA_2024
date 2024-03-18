@@ -12,7 +12,7 @@ public interface Visitable {
         if(timeInterval != null ){
             return timeInterval.getFirst();
         }
-        return null;
+        return timeInterval.getFirst();
     }
 
 }

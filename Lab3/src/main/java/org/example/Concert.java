@@ -7,8 +7,10 @@ public class Concert extends Attraction implements Visitable, Payable {
     private Map<LocalDate, TimeInterval> timetable;
     private double ticketPrice;
 
-    public Concert(String name, String description) {
+    public Concert(String name, String description, double ticketPrice, Map<LocalDate, TimeInterval> timetable) {
         super(name, description);
+        this.ticketPrice = ticketPrice;
+        this.timetable = timetable;
     }
 
     @Override
@@ -25,4 +27,5 @@ public class Concert extends Attraction implements Visitable, Payable {
     public int compareTo(Attraction o) {
         return 0;
     }
+
 }
