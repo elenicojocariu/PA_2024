@@ -30,3 +30,14 @@ Tema 3: Am implementat clasele Statue, Concert,Church care mostenesc clasa Attra
 <br>
 Bonus 3: 
 </br>
+<br>
+**_Week 4:_**
+</br>
+<br>
+Compulsory 4:  
+</br>
+<br>
+Tema 4:   </br>
+<br>
+Bonus 4:
+</br>
