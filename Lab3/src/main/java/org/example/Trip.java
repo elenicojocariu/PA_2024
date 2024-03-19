@@ -3,6 +3,7 @@ package org.example;
 import org.example.Attraction;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -61,17 +62,9 @@ public class Trip {
                 '}';
     }
 
-    public void displayVisitableNotPayable(){
-        List<Attraction> visitableNotPayableLocations = new ArrayList<>();
-        for (Attraction attraction : attractions) {
-            if (attraction instanceof Visitable && !(attraction instanceof Payable)) {
-                visitableNotPayableLocations.add(attraction);
-            }
-        }
+  
 
 
-
-        }
 
 
 
