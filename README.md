@@ -23,10 +23,10 @@ Bonus 2:
 **_Week 3:_**
 </br>
 <br>
-Compulsory 3: 
+Compulsory 3: done
 </br>
 <br>
-Tema 3:  </br>
+Tema 3: Am implementat clasele Statue, Concert,Church care mostenesc clasa Attraction. Clasa Concert implementeaza interfetele <<Visitable>> si <<Payable>>. Clasa Church implementeaza interfata <<Visitable>>. Atasez link catre diagrama UML cu reprezentarea claselor, interfetelor etc: https://app.diagrams.net/#G1M3Yzf1pSivOzdeEcB06gLa_oDu_eteia#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D . Clasa Pair este generica. In <<Visitable>> am declarat getTimetable care returneaza un Map cu cheia DayOfWeek si valoarea TimeInterval. TimeInterval este o clasa ce extinde genericul Pair. Am implementat metoda default getOpeningHour care returneaza un LocalTime si foloseste din Pair .getFirst (ora deschiderii). In clasa TravelPlan am metoda generateTravelPlan() care ia perioada din startDate-ul si endDate-ul vacantei si in functie de timetable-ul fiecarei atractii <<Visitable>> o pune in plan. </br>
 <br>
 Bonus 3: 
 </br>
