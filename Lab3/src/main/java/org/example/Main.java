@@ -1,10 +1,13 @@
 package org.example;
 
+import org.w3c.dom.Attr;
+
 import java.sql.Time;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +42,11 @@ public class Main {
         church2.addTimeInterval(DayOfWeek.TUESDAY, LocalTime.of(8,30), LocalTime.of(15,30));
         church2.addTimeInterval(DayOfWeek.THURSDAY, LocalTime.of(8,30), LocalTime.of(15,30));
         church2.addTimeInterval(DayOfWeek.SUNDAY, LocalTime.of(15,0), LocalTime.of(18,30));
+        for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
+            if (dayOfWeek != DayOfWeek.TUESDAY && dayOfWeek != DayOfWeek.THURSDAY && dayOfWeek != DayOfWeek.SUNDAY) {
+                church2.addTimeInterval(dayOfWeek, LocalTime.MIN, LocalTime.MIN);
+            }
+        }
 
         attractions.add(church2);
 
@@ -81,6 +89,16 @@ public class Main {
                 System.out.println("Opening hour for " + attraction.getName() + " on " + currentDate + " is: " + openingHour);
             }
         }
+
+        TravelPlan travelPlan = new TravelPlan();
+        travelPlan.printTravelPlan();
+
+        for(Attraction attraction : trip.getAttractions()){
+            LocalDate visitDay = LocalDate.of(2024, 8, 26);
+            travelPlan.addAttraction(attraction, visitDay);
+        }
+        travelPlan.printTravelPlan();
+
 
 
 
