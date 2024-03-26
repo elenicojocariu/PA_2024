@@ -6,10 +6,12 @@ public class Persons {
     private String lastName;
     private boolean isDrive;
 
-    public Persons(String firstName, String lastName, boolean isDrive) {
+    private int age;
+    public Persons(String firstName, String lastName, boolean isDrive, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.isDrive = isDrive;
+        this.age=age;
     }
 
     public String getFirstName() {
@@ -36,12 +38,21 @@ public class Persons {
         isDrive = drive;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Persons{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", isDrive=" + isDrive +
+                ", age=" + age +
                 '}';
     }
 }

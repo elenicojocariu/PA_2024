@@ -1,5 +1,7 @@
 package org.example;
 
+import com.github.javafaker.Faker;
+
 import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,10 @@ public class Main {
             String firstName = faker.name().firstName();
             String lastName = faker.name().lastName();
             boolean isDriver = random.nextBoolean();
-            personsList.add(new Persons(firstName, lastName, isDriver));
+            int minVarsta = 18;
+            int maxVarsta = 75;
+            int age = random.nextInt(maxVarsta- minVarsta) +minVarsta; //de pus interval
+            personsList.add(new Persons(firstName, lastName, isDriver, age));
         }
         System.out.println("List of persons: ");
         for (Persons persons : personsList) {
