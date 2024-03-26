@@ -3,9 +3,7 @@ package org.example;
 import com.github.javafaker.Faker;
 
 import java.sql.Struct;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static  void main(String[] args) {
@@ -24,6 +22,17 @@ public class Main {
         System.out.println("List of persons: ");
         for (Persons persons : personsList) {
             System.out.println(persons);
+        }
+        LinkedList<Persons> sortedDriversList = Persons.getSortedDrivers(personsList);
+        System.out.println("\n Lista soferi soratati dupa varsta: \n");
+        for(Persons driver : sortedDriversList){
+            System.out.println(driver);
+        }
+
+        Set<Persons> sortedPassengersSet = Persons.getSortedPassanger(personsList);
+        System.out.println(" \n TreeSetul de pasageri sortati dupa nume: \n");
+        for(Persons passenger: sortedPassengersSet){
+            System.out.println(passenger);
         }
 
 
