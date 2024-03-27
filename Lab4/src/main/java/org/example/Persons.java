@@ -9,6 +9,9 @@ public class Persons {
     private String lastName;
     private boolean isDrive;
     private int age;
+    private List<Destinatie> destinationsList = new ArrayList<>();
+
+    private boolean taken;
     public Persons(String firstName, String lastName, boolean isDrive, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -55,8 +58,10 @@ public class Persons {
                 ", lastName='" + lastName + '\'' +
                 ", isDrive=" + isDrive +
                 ", age=" + age +
+                ", destinationsList=" + destinationsList +
                 '}';
     }
+
     public static LinkedList<Persons> getSortedDrivers(List<Persons> personsList){
         List<Persons> driversList = personsList.stream()
                 .filter(Persons::isDrive)
@@ -73,7 +78,18 @@ public class Persons {
         passangersTreeSet.addAll(passangersList);
         return passangersTreeSet;
     }
+    public void addDestination( Destinatie destinatie){
+        this.destinationsList.add(destinatie);
+    }
 
+    public List<Destinatie> getDestinationsList() {
+        return destinationsList;
+    }
+    public boolean isTaken(){
+        return taken;
+    }
 
-
+    public void setTaken(boolean taken) {
+        this.taken = taken;
+    }
 }
