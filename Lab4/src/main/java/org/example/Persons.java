@@ -11,7 +11,7 @@ public class Persons {
     private int age;
     private List<Destinatie> destinationsList = new ArrayList<>();
 
-    private boolean taken;
+    private static boolean taken;
     public Persons(String firstName, String lastName, boolean isDrive, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -90,6 +90,6 @@ public class Persons {
     }
 
     public void setTaken(boolean taken) {
-        this.taken = taken;
+        Persons.taken = taken;
     }
 }

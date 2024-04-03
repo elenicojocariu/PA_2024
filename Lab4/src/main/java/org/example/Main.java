@@ -1,12 +1,13 @@
 package org.example;
 
 import com.github.javafaker.Faker;
+import org.jgrapht.Graph;
+import org.jgrapht.graph.DefaultEdge;
 
-import java.sql.Struct;
+
 import java.util.*;
 
-import static org.example.Problem.destinationsForDrivers;
-import static org.example.Problem.greedyAlgorithm;
+import static org.example.Problem.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +17,8 @@ public class Main {
         List<Destinatie> destinatieList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            String firstName = faker.name().firstName();
-            String lastName = faker.name().lastName();
+            String firstName = faker.funnyName().name();
+            String lastName = faker.funnyName().name();
             boolean isDriver = random.nextBoolean();
             int minVarsta = 18;
             int maxVarsta = 75;
@@ -80,5 +81,11 @@ public class Main {
         }
 
         greedyAlgorithm(personsList);
+        //solveProblem(personsList);
+        Graph<Persons, DefaultEdge> graph = solveProblem(personsList);
+        visualizeGraph(graph);
+
+
     }
+
 }
