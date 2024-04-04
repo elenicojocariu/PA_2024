@@ -1,3 +1,5 @@
+See all the information for each lab& week ->>>
+
 **_Week 1:_**
 <br>
 Compulsory 1: done
@@ -41,4 +43,17 @@ Tema 4:  Am facut un proiect Maven, in fisierul pom.xml am adaugat dependentele 
 </br>
 <br>
 Bonus 4: Am folosit JGraphT pentru a crea un graf in care nodurile sut persoanele si muchiile intre doferii si pasagerii cu destinatie comuna. Am folosit Java AWT pentru a face un Panel care vizualizeaza sub forma unui graf bipartit nodurile corespunzatoare soferilor si cele ale pasagerilor.
+</br>
+
+<br>
+**_Week 5:_**
+</br>
+<br>
+Compulsory 5:  
+</br>
+<br>
+Tema 5:   
+</br>
+<br>
+Bonus 5: 
 </br>
