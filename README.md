@@ -1,3 +1,5 @@
+See all the information for each lab& week ->>>
+
 **_Week 1:_**
 <br>
 Compulsory 1: done
@@ -37,7 +39,21 @@ Bonus 3:
 Compulsory 4:  done
 </br>
 <br>
-Tema 4:   </br>
+Tema 4:  Am facut un proiect Maven, in fisierul pom.xml am adaugat dependentele necesare (faker si jgrapht). Am clasa Person in care definesc nume, prenume,varsta, o lista de destinatii si proprietatea isDriver (boolean). Am creat persoane cu nume, adrese random cu ajutorul lui FunnyFaker. Si proprietatea de isDriver este tot random atribuita. In clasa Problem am folosit stream-uri pentru a converti lista de obiecte in elemente si a filtra soferii si pasagerii dupa criteriile cerute. Am facut o lista cu toate destinatiile soferilor si un map cu toate destinatiile folosind Java API streams. Algoritmul greedy din clasa Problem atribuie fiecarui sofer cate un pasager cu aceeasi destinatie (daca exista). 
+</br>
 <br>
-Bonus 4:
+Bonus 4: Am folosit JGraphT pentru a crea un graf in care nodurile sut persoanele si muchiile intre doferii si pasagerii cu destinatie comuna. Am folosit Java AWT pentru a face un Panel care vizualizeaza sub forma unui graf bipartit nodurile corespunzatoare soferilor si cele ale pasagerilor.
+</br>
+
+<br>
+**_Week 5:_**
+</br>
+<br>
+Compulsory 5:  done
+</br>
+<br>
+Tema 5:   
+</br>
+<br>
+Bonus 5: 
 </br>
