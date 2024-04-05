@@ -49,7 +49,7 @@ Bonus 4: Am folosit JGraphT pentru a crea un graf in care nodurile sut persoanel
 **_Week 5:_**
 </br>
 <br>
-Compulsory 5:  
+Compulsory 5:  done
 </br>
 <br>
 Tema 5:   
