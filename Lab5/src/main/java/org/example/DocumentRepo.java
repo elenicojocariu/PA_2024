@@ -1,20 +1,22 @@
 package org.example;
-import java.io.*;
 import java.io.File;
 import java.util.*;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+import java.util.List;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 
 public class DocumentRepo {
     private String masterDirectory;
+
     private Map<String, List<Document>> documents = new HashMap<>();
 
-    public DocumentRepo(){
+    private final Map<Integer, Person> employees; //angajatii so documentele asociate
 
-    }
-    public DocumentRepo(String masterDirectory) {
+    public DocumentRepo(String masterDirectory, Map<Integer, Person> employees) {
 
         this.masterDirectory = masterDirectory;
+        this.employees = new HashMap<>();
         loadDocuments();
     }
 
@@ -41,7 +43,7 @@ public class DocumentRepo {
                                 String fileName = file.getName();
                                 String[] parts = fileName.split("\\."); //split la extensia fisierului
                                 String format = parts.length > 1? parts[parts.length -1] :"Unknown";
-                                personDocuments.add(new Document(fileName,format));
+                                personDocuments.add(new Document(fileName,format,""));
                             });
                 }
                 //add persoana si documentele asoc in documents Map
@@ -76,6 +78,21 @@ public class DocumentRepo {
             }
             System.out.println();
         }
+    }
+    public Document findDocument(int employeeId, String documentName) {
+        List<Document> employeeDocuments = documents.getOrDefault(employeeId, new ArrayList<>());
+
+        // Parcurgem lista de documente și căutăm documentul cu numele specificat
+        for (Document doc : employeeDocuments) {
+            // Verificăm dacă numele documentului se potrivește cu documentName
+            if (doc.fileName().equals(documentName)) { // Utilizăm metoda corespunzătoare din clasa Document
+                return doc; // Returnăm documentul găsit
+            }
+        }
+        return null;
+    }
+    public Map<String, List<Document>> getDocuments() {
+        return documents;
     }
 
 
