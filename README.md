@@ -57,3 +57,29 @@ Tema 5:
 <br>
 Bonus 5: 
 </br>
+
+<br>
+**_Week 6:_**
+</br>
+<br>
+Compulsory 6:  done
+</br>
+<br>
+Tema 6:  
+</br>
+<br>
+Bonus 6:
+</br>
+
+<br>
+**_Week 7:_**
+</br>
+<br>
+Compulsory 7:  
+</br>
+<br>
+Tema 7: 
+</br>
+<br>
+Bonus 7: 
+</br>
