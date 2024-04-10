@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InvalidClassException;
 
 public class RepositoryService {
-// Export repository to JSON file
+
     public void export(DocumentRepo repo, String path) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writeValue(new File(path), repo);

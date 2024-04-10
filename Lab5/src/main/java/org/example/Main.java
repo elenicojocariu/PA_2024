@@ -1,11 +1,11 @@
 package org.example;
 
-import javax.print.Doc;
 import java.io.IOException;
+import java.lang.module.Configuration;
 
 public class Main {
-    public static void main(String[] args){
-        String masterDirectory = "path_to_master_directory"; // Replace this with the actual path
+    public static void main(String[] args) throws IOException{
+        String masterDirectory = "C:\\Users\\eleni\\OneDrive\\Desktop\\MasterDirectory";
         DocumentRepo repository = new DocumentRepo(masterDirectory);
         RepositoryService repositoryService = new RepositoryService();
 
@@ -15,7 +15,7 @@ public class Main {
 
             // Read repository from JSON file
             DocumentRepo readRepo = repositoryService.read("repository.json");
-            readRepo.displayContent();
+            readRepo.displayRepositoryContent();
         } catch (IOException | InvalidRepositoryException e) {
             e.printStackTrace();
         }
