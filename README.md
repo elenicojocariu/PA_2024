@@ -52,8 +52,40 @@ Bonus 4: Am folosit JGraphT pentru a crea un graf in care nodurile sut persoanel
 Compulsory 5:  done
 </br>
 <br>
-Tema 5:   
+Tema 5:   In consola: Enter command (view <document_name>, report, export, or exit): export C:\Users\eleni\PA_2024\Lab5\repository.json
+Repository exported to: C:\Users\eleni\PA_2024\Lab5\repository.json si continutul lui repository.json: {"masterDirectory":"C:\\Users\\eleni\\OneDrive\\Desktop\\MasterDirectory","documents":{"03Samson":[{"fileName":"Captură de ecran 2024-01-11 174941.png","format":"png","path":""},{"fileName":"ml-ex.EN.2021f.PT.pdf","format":"pdf","path":""}],"02Jason":[{"fileName":"JavaNotesForProfessionals.pdf","format":"pdf","path":""}],"01Smith":[{"fileName":"Captură de ecran 2024-01-10 211920.png","format":"png","path":""}]},"employees":{}}
+
+Enter command (view <document_name>, report, export, or exit): report
+face report-ul. 
+Comanda View nu merge, orice nume de document i-as da, nu-l gaseste.
+
 </br>
 <br>
 Bonus 5: 
+</br>
+
+<br>
+**_Week 6:_**
+</br>
+<br>
+Compulsory 6:  done
+</br>
+<br>
+Tema 6:  
+</br>
+<br>
+Bonus 6:
+</br>
+
+<br>
+**_Week 7:_**
+</br>
+<br>
+Compulsory 7:  
+</br>
+<br>
+Tema 7: 
+</br>
+<br>
+Bonus 7: 
 </br>
