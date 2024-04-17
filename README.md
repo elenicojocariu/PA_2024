@@ -65,6 +65,7 @@ Bonus 5:
 </br>
 
 <br>
+
 **_Week 6:_**
 </br>
 <br>
@@ -77,8 +78,6 @@ Tema 6:
 Bonus 6:
 </br>
 
-<br>
-**_Week 1:_**
 
 **_Week 7:_**
 </br>
