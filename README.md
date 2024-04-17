@@ -60,7 +60,6 @@ Repository exported to: C:\Users\eleni\PA_2024\Lab5\repository.json si continutu
 Enter command (view <document_name>, report, export, or exit): report
 face report-ul. 
 Comanda View nu merge, orice nume de document i-as da, nu-l gaseste.
-
 </br>
 <br>
 Bonus 5: 
@@ -79,7 +78,6 @@ Tema 6:
 <br>
 Bonus 6:
 </br>
-
 
 **_Week 7:_**
 </br>
