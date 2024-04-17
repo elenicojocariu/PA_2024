@@ -78,6 +78,8 @@ Bonus 6:
 </br>
 
 <br>
+**_Week 1:_**
+
 **_Week 7:_**
 </br>
 <br>
