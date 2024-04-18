@@ -82,7 +82,7 @@ Bonus 6:
 **_Week 7:_**
 </br>
 <br>
-Compulsory 7:  
+Compulsory 7:  done
 </br>
 <br>
 Tema 7: 
