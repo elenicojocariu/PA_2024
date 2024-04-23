@@ -1,19 +1,25 @@
 package org.example;
 
 public class Tile {
-    private final int firstNumber;
-    private final int secondNumber;
+    private final int first;
+    private final int second;
 
-    public Tile(int firstNumber, int secondNumber) {
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
+    public Tile(int first, int second) {
+        this.first = first;
+        this.second = second;
     }
 
-    public int getFirstNumber() {
-        return firstNumber;
+    @Override
+    public String toString() {
+        return "(" + first + "," + second + ")";
     }
 
-    public int getSecondNumber() {
-        return secondNumber;
+    public int getFirst() {
+        return first;
+    }
+
+    public int getSecond() {
+        return second;
     }
 }
+

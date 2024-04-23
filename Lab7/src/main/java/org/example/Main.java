@@ -2,7 +2,11 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Game game = new Game(4, 5000);
+        game.addPlayer(new Player("Player 1"));
+        game.addPlayer(new Player("Player 2"));
+        game.addPlayer(new Player("Player 3"));
+        game.play();
     }
 }
 //Sugestii lab:
