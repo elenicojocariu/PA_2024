@@ -46,7 +46,9 @@ Bonus 4: Am folosit JGraphT pentru a crea un graf in care nodurile sut persoanel
 </br>
 
 <br>
+
 **_Week 5:_**
+
 </br>
 <br>
 Compulsory 5:  done
@@ -58,13 +60,13 @@ Repository exported to: C:\Users\eleni\PA_2024\Lab5\repository.json si continutu
 Enter command (view <document_name>, report, export, or exit): report
 face report-ul. 
 Comanda View nu merge, orice nume de document i-as da, nu-l gaseste.
-
 </br>
 <br>
 Bonus 5: 
 </br>
 
 <br>
+
 **_Week 6:_**
 </br>
 <br>
@@ -77,11 +79,10 @@ Tema 6:
 Bonus 6:
 </br>
 
-<br>
 **_Week 7:_**
 </br>
 <br>
-Compulsory 7:  
+Compulsory 7:  done
 </br>
 <br>
 Tema 7: 
