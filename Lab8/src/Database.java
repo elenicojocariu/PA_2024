@@ -1,25 +1,30 @@
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    private static final String URL =
-            "jdbc:postgresql://localhost:5432/books";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "password";
-    private static Connection connection = null;
-    //private Database() {}
-    public static Connection getConnection() {
-        //TO DO
-        return null;
-    }
-    private static void createConnection() {
-        try {
-            //Connection = TO DO
-            connection.setAutoCommit(false);
-        } catch (SQLException e) {
-            System.err.println(e);
+    private static Database instance;
+    private Connection connection;
+    private static final String URL = "jdbc:mysql://localhost:3306/book_collection";
+    private static final String USER = "root"; //DB username
+    private static final String PASSWORD = "STUDENT"; //replace with DB pass
+
+    private Database(){
+        try{
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (SQLException e){
+            e.printStackTrace();
         }
     }
-    public static void closeConnection() { //TO DO
-         }
+    public static Database getInstance(){
+        if(instance == null){
+            instance = new Database();
+        }
+        return instance;
+    }
+
+    public Connection getConnection(){
+        return connection;
+    }
+
 }
