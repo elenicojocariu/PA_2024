@@ -11,6 +11,12 @@ public class GameServer {
     private static final int PORT = 12345;
     private volatile boolean running = true; //volatila pt thread
     private ServerSocket serverSocket;
+    private Game game;
+
+    public GameServer() {
+        this.game = new Game();
+    }
+
     public static void main(String[] args) {
         new GameServer().startServer();
     }
@@ -22,37 +28,39 @@ public class GameServer {
             System.out.println("Game server is running...");
 
             while (running) {
-                try{
+                try {
                     Socket clientSocket = serverSocket.accept();
                     pool.execute(new ClientThread(this, clientSocket));
 
-                }catch (IOException e){
-                    if(running)
-                    System.err.println("Error acceping client conn: " + e.getMessage());
+                } catch (IOException e) {
+                    if (running)
+                        System.err.println("Error acceping client conn: " + e.getMessage());
                     else System.out.println("Server stopped.");
                 }
-                 }
+            }
         } catch (IOException e) {
             System.err.println("Error at starting the server: " + e.getMessage());
-        }
-        finally {
+        } finally {
             pool.shutdown();
         }
     }
 
-        public void stopServer() {
-            running = false;
-            if (serverSocket != null && !serverSocket.isClosed()) {
-                try {
-                    serverSocket.close(); // close the server socket to break out of the accept call
-                    System.out.println("Server is stopping..");
-                } catch (IOException e) {
-                    System.err.println("Error closing server socket: " + e.getMessage());
-                }
+    public void stopServer() {
+        running = false;
+        if (serverSocket != null && !serverSocket.isClosed()) {
+            try {
+                serverSocket.close(); // close the server socket to break out of the accept call
+                System.out.println("Server is stopping..");
+            } catch (IOException e) {
+                System.err.println("Error closing server socket: " + e.getMessage());
             }
-
         }
 
+    }
+
+    public Game getGame() {
+        return game;
+    }
 
 }
 
